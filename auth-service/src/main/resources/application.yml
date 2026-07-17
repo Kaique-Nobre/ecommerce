@@ -1,0 +1,24 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+  application:
+    name: auth-service
+
+  datasource:
+    url: ${AUTH_DB_URL}
+    username: ${AUTH_DB_USER}
+    password: ${AUTH_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8081
