@@ -1,4 +1,4 @@
-package com.kaique.ecommerce.auth_service.config;
+package com.kaique.ecommerce.auth_service.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
