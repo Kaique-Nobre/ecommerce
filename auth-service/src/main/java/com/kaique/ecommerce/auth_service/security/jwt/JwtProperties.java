@@ -8,7 +8,6 @@ import org.springframework.validation.annotation.Validated;
 import java.time.Duration;
 
 @Validated
-@Component
 @ConfigurationProperties(prefix = "app.jwt")
 public record JwtProperties(
         @NotBlank
