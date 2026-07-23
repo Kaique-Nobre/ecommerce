@@ -92,6 +92,7 @@ public class JwtService {
                 .withSubject(jwtUser.id().toString())
                 .withClaim("type", tokenType.name())
                 .withClaim("roles", jwtUser.roles().stream().map(RoleName::name).toList())
+                .withJWTId(UUID.randomUUID().toString())
                 .withIssuedAt(now)
                 .withExpiresAt(now.plus(expiration))
                 .sign(getAlgorithm());

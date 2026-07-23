@@ -65,4 +65,8 @@ public class User {
 
         return user;
     }
+
+    public void disableUser(User user) {
+        user.enabled = false;
+    }
 }
