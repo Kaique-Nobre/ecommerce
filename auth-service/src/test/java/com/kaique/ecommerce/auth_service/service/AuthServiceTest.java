@@ -9,6 +9,8 @@ import com.kaique.ecommerce.auth_service.entity.Role;
 import com.kaique.ecommerce.auth_service.entity.RoleName;
 import com.kaique.ecommerce.auth_service.entity.User;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.*;
+import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
+import com.kaique.ecommerce.auth_service.messaging.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.repositories.RoleRepository;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.AuthenticatedUser;
@@ -63,6 +65,9 @@ public class AuthServiceTest {
     @Mock
     private JwtProperties jwtProperties;
 
+    @Mock
+    private RabbitDomainEventPublisher eventPublisher;
+
     @InjectMocks
     private AuthService authService;
 
@@ -85,6 +90,7 @@ public class AuthServiceTest {
         verify(roleRepository).findByName(any(RoleName.class));
         verify(passwordEncoder).encode(any(String.class));
         verify(userRepository).save(any(User.class));
+        verify(eventPublisher).publish(any(DomainEvent.class));
 
         assertEquals(register.email(), request.email());
     }

@@ -3,6 +3,9 @@ package com.kaique.ecommerce.auth_service.integration;
 import com.kaique.ecommerce.auth_service.dtos.RegisterRequest;
 import com.kaique.ecommerce.auth_service.dtos.login.LoginRequest;
 import com.kaique.ecommerce.auth_service.entity.User;
+import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
+import com.kaique.ecommerce.auth_service.messaging.RabbitMQConfig;
+import com.kaique.ecommerce.auth_service.messaging.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.jwt.JwtService;
 import com.kaique.ecommerce.auth_service.security.jwt.JwtUser;
@@ -16,11 +19,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import tools.jackson.databind.ObjectMapper;
 
 import java.time.Duration;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -47,6 +53,9 @@ public class AuthIntegrationTest extends IntegrationTest {
     @Autowired
     private RefreshTokenHashService refreshTokenHashService;
 
+    @MockitoBean
+    private RabbitDomainEventPublisher eventPublisher;
+
     @BeforeEach
     void cleanDatabase() {
         refreshTokenRepository.deleteAll();
@@ -61,6 +70,9 @@ public class AuthIntegrationTest extends IntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isCreated());
+
+        verify(eventPublisher)
+                .publish(any(DomainEvent.class));
     }
 
     @Test

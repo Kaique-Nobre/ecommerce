@@ -9,6 +9,8 @@ import com.kaique.ecommerce.auth_service.entity.Role;
 import com.kaique.ecommerce.auth_service.entity.RoleName;
 import com.kaique.ecommerce.auth_service.entity.User;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.*;
+import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
+import com.kaique.ecommerce.auth_service.messaging.event.UserRegisteredEvent;
 import com.kaique.ecommerce.auth_service.repositories.RoleRepository;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.AuthenticatedUser;
@@ -41,6 +43,7 @@ public class AuthService {
     private final RefreshTokenHashService refreshTokenHashService;
     private final RefreshTokenRepository refreshTokenRepository;
     private final JwtProperties jwtProperties;
+    private final RabbitDomainEventPublisher eventPublisher;
 
     @Transactional
     public UserResponse register(RegisterRequest request) {
@@ -61,6 +64,13 @@ public class AuthService {
         );
 
         User savedUser = userRepository.save(user);
+
+        eventPublisher.publish(
+                new UserRegisteredEvent(
+                        savedUser.getId(),
+                        savedUser.getEmail()
+                )
+        );
 
         return new UserResponse(
                 savedUser.getId(),
