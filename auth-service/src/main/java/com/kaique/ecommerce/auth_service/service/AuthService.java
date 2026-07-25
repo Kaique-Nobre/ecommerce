@@ -10,7 +10,7 @@ import com.kaique.ecommerce.auth_service.entity.RoleName;
 import com.kaique.ecommerce.auth_service.entity.User;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.*;
 import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
-import com.kaique.ecommerce.auth_service.messaging.event.UserRegisteredEvent;
+import com.ecommerce.contracts.event.user.UserRegisteredEvent;
 import com.kaique.ecommerce.auth_service.repositories.RoleRepository;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.AuthenticatedUser;

@@ -1,7 +1,7 @@
 package com.kaique.ecommerce.auth_service.messaging;
 
-import com.kaique.ecommerce.auth_service.messaging.annotation.EventMetadata;
-import com.kaique.ecommerce.auth_service.messaging.event.DomainEvent;
+import com.ecommerce.contracts.event.DomainEvent;
+import com.ecommerce.contracts.event.annotation.EventMetadata;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,7 @@ public class RabbitDomainEventPublisher implements DomainEventPublisher{
 
         rabbitTemplate.convertAndSend(
                 RabbitConstants.ECOMMERCE_EXCHANGE,
-                metadata.routingKey(),
+                metadata.eventName(),
                 event
         );
     }

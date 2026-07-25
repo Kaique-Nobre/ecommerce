@@ -1,4 +1,4 @@
-package com.kaique.ecommerce.auth_service.messaging.annotation;
+package com.ecommerce.contracts.event.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EventMetadata {
 
-    String routingKey();
+    String eventName();
 }

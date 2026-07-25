@@ -1,11 +1,10 @@
 package com.kaique.ecommerce.auth_service.integration;
 
+import com.ecommerce.contracts.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.dtos.RegisterRequest;
 import com.kaique.ecommerce.auth_service.dtos.login.LoginRequest;
 import com.kaique.ecommerce.auth_service.entity.User;
 import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
-import com.kaique.ecommerce.auth_service.messaging.RabbitMQConfig;
-import com.kaique.ecommerce.auth_service.messaging.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.jwt.JwtService;
 import com.kaique.ecommerce.auth_service.security.jwt.JwtUser;

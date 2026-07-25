@@ -1,5 +1,6 @@
 package com.kaique.ecommerce.auth_service.service;
 
+import com.ecommerce.contracts.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.dtos.AuthResponse;
 import com.kaique.ecommerce.auth_service.dtos.RegisterRequest;
 import com.kaique.ecommerce.auth_service.dtos.UserResponse;
@@ -10,7 +11,6 @@ import com.kaique.ecommerce.auth_service.entity.RoleName;
 import com.kaique.ecommerce.auth_service.entity.User;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.*;
 import com.kaique.ecommerce.auth_service.messaging.RabbitDomainEventPublisher;
-import com.kaique.ecommerce.auth_service.messaging.event.DomainEvent;
 import com.kaique.ecommerce.auth_service.repositories.RoleRepository;
 import com.kaique.ecommerce.auth_service.repositories.UserRepository;
 import com.kaique.ecommerce.auth_service.security.AuthenticatedUser;

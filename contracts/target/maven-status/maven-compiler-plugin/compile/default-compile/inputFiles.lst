@@ -1,0 +1,4 @@
+/home/kaique/Documentos/Projetos/ecommerce/contracts/src/main/java/com/ecommerce/Main.java
+/home/kaique/Documentos/Projetos/ecommerce/contracts/src/main/java/com/ecommerce/contracts/event/DomainEvent.java
+/home/kaique/Documentos/Projetos/ecommerce/contracts/src/main/java/com/ecommerce/contracts/event/annotation/EventMetadata.java
+/home/kaique/Documentos/Projetos/ecommerce/contracts/src/main/java/com/ecommerce/contracts/event/user/UserRegisteredEvent.java
