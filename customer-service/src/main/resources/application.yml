@@ -1,0 +1,37 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+
+  application:
+    name: customer-service
+
+  datasource:
+    url: ${CUSTOMER_DB_URL}
+    username: ${CUSTOMER_DB_USER}
+    password: ${CUSTOMER_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ${RABBITMQ_USER}
+    password: ${RABBITMQ_PASSWORD}
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 1s
+          multiplier: 2.0
+          max-interval: 10s

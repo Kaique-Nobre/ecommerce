@@ -72,6 +72,20 @@ services:
     networks:
       - microservices-net
 
+  customer-db:
+    image: postgres:16-alpine
+    container_name: postgres_customer
+    environment:
+      POSTGRES_USER: ${CUSTOMER_DB_USER}
+      POSTGRES_PASSWORD: ${CUSTOMER_DB_PASSWORD}
+      POSTGRES_DB: customer_db
+    ports:
+      - "5437:5432"
+    volumes:
+      - customer_db_data:/var/lib/postgresql/data
+    networks:
+      - microservices-net
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -95,5 +109,6 @@ volumes:
   inventory_db_data:
   payment_db_data:
   notification_db_data:
+  customer_db_data:
   rabbitmq_data:
     driver: local
