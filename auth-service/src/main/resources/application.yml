@@ -19,6 +19,8 @@ spring:
 
   flyway:
     enabled: true
+    locations:
+      - classpath:db/migration/auth
 
   rabbitmq:
     host: localhost

@@ -21,6 +21,8 @@ spring:
 
   flyway:
     enabled: true
+    locations:
+      - classpath:db/migration/order
 
   rabbitmq:
     host: localhost
