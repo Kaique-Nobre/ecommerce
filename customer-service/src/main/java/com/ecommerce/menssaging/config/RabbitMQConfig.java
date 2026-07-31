@@ -8,7 +8,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.retry.RetryTemplate;
-import org.springframework.messaging.converter.JacksonJsonMessageConverter;
+import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
 
 @Configuration
 public class RabbitMQConfig {
@@ -72,7 +72,7 @@ public class RabbitMQConfig {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
 
         factory.setConnectionFactory(connectionFactory);
-        factory.setMessageConverter((MessageConverter) converter);
+        factory.setMessageConverter(converter);
 
         return factory;
     }

@@ -1,0 +1,17 @@
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/OrderServiceApplication.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/dtos/request/CreateOrderItemRequest.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/dtos/request/CreateOrderRequest.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/dtos/response/OrderItemResponse.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/dtos/response/OrderResponse.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/entity/Order.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/entity/OrderItem.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/entity/OrderStatus.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/mapper/OrderMapper.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/menssaging/OrderEventFactory.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/menssaging/config/RabbitMQConfig.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/menssaging/publisher/DomainEventPublisher.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/menssaging/publisher/RabbitDomainEventPublisher.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/product/ProductClient.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/product/ProductSnapshot.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/repository/OrderRepository.java
+/home/kaique/Documentos/Projetos/ecommerce/order-service/src/main/java/com/ecommerce/service/OrderService.java

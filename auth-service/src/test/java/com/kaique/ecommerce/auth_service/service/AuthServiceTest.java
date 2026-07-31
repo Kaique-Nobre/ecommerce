@@ -1,6 +1,8 @@
 package com.kaique.ecommerce.auth_service.service;
 
 import com.ecommerce.contracts.event.DomainEvent;
+import com.ecommerce.contracts.exception.ConflictException;
+import com.ecommerce.contracts.exception.ResourceNotFoundException;
 import com.kaique.ecommerce.auth_service.dtos.AuthResponse;
 import com.kaique.ecommerce.auth_service.dtos.RegisterRequest;
 import com.kaique.ecommerce.auth_service.dtos.UserResponse;

@@ -1,0 +1,13 @@
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/Main.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/event/DomainEvent.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/event/annotation/EventMetadata.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/event/order/OrderCreatedEvent.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/event/order/OrderCreatedItem.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/event/user/UserRegisteredEvent.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/BadRequestException.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/BusinessException.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/ConflictException.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/ErrorResponse.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/ForbiddenException.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/ResourceNotFoundException.java
+/home/kaique/Documentos/Projetos/ecommerce/shared/src/main/java/com/ecommerce/contracts/exception/ValidationErrorResponse.java

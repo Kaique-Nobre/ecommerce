@@ -1,0 +1,7 @@
+com/ecommerce/menssaging/config/RabbitMQConfig.class
+com/ecommerce/entity/Customer.class
+com/ecommerce/repository/CustomerRepository.class
+com/ecommerce/CustomerServiceApplication.class
+com/ecommerce/menssaging/constants/RabbitConstants.class
+com/ecommerce/service/CustomerService.class
+com/ecommerce/menssaging/consumer/UserRegisteredConsumer.class

@@ -1,5 +1,8 @@
 package com.kaique.ecommerce.auth_service.exceptions;
 
+import com.ecommerce.contracts.exception.BusinessException;
+import com.ecommerce.contracts.exception.ErrorResponse;
+import com.ecommerce.contracts.exception.ValidationErrorResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

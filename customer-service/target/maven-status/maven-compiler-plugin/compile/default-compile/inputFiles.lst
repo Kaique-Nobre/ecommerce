@@ -1,0 +1,7 @@
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/CustomerServiceApplication.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/entity/Customer.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/menssaging/config/RabbitMQConfig.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/menssaging/constants/RabbitConstants.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/menssaging/consumer/UserRegisteredConsumer.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/repository/CustomerRepository.java
+/home/kaique/Documentos/Projetos/ecommerce/customer-service/src/main/java/com/ecommerce/service/CustomerService.java

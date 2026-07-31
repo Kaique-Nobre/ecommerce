@@ -30,7 +30,7 @@ public class Customer {
     @Column(nullable = false)
     private OffsetDateTime createdAt;
 
-    @Column(nullable = false)
+    @Column(name = "update_at", nullable = false)
     private OffsetDateTime updatedAt;
 
     public static Customer create(UUID id, String email) {

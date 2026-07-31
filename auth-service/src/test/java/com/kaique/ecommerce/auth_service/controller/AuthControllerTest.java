@@ -7,7 +7,7 @@ import com.kaique.ecommerce.auth_service.dtos.login.LoginRequest;
 import com.kaique.ecommerce.auth_service.dtos.refreshToken.RefreshTokenRequest;
 import com.kaique.ecommerce.auth_service.entity.RoleName;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.BadCredentialsException;
-import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.ConflictException;
+import com.ecommerce.contracts.exception.ConflictException;
 import com.kaique.ecommerce.auth_service.exceptions.genericExceptions.InvalidTokenException;
 import com.kaique.ecommerce.auth_service.security.jwt.JwtAuthenticationFilter;
 import com.kaique.ecommerce.auth_service.service.AuthService;
